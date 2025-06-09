@@ -91,6 +91,12 @@ a:hover{
 
 iframe{
     border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+iframe:hover{
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 #services{
@@ -99,6 +105,7 @@ iframe{
 
 .thing0{
     text-align: center;
+    color: #00568c;
 }
 
 .thing1{
@@ -125,7 +132,7 @@ iframe{
     color: #00568c;
 }
 
-.tech-grid {
+.tech-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
     grid-template-columns: repeat(4, 1fr);
@@ -133,7 +140,7 @@ iframe{
     margin-top: 2rem;
 }
 
-.tech-item {
+.tech-item{
     background: linear-gradient(135deg, #00568c, #008e66, #008e66);
     color: #ffffff;
     padding: 1rem;
@@ -142,8 +149,107 @@ iframe{
     transition: all 0.3s ease;
 }
 
-.tech-item:hover {
+.tech-item:hover{
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     cursor: crosshair;
+}
+
+.interactive-demo {
+    background: #e3e3e3;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.demo-box{
+    width: 100px;
+    height: 100px;
+    background: #00568c;
+    margin: 1rem auto;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.demo-box::after{
+    content: 'Hover Me!';
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #3d3d3d;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.demo-box:hover{
+    background: #008e66;
+    transform: rotate(45deg) scale(1.2);
+    border-radius: 50%;
+}
+
+.center{
+    align-content: center;
+    justify-content: center;
+}
+
+.visibility-demo{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.show-button {
+    background: #00568c;
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.show-button:hover {
+    background: #006eb3;
+    transform: translateY(-2px);
+}
+
+.hidden-element {
+    background: #008e66;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.box-model-demo {
+    background: #e3e3e3;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.box-example {
+    background: #00568c;
+    color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border: 5px solid #008e66;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.box-example:hover {
+    padding: 30px;
+    margin: 30px;
+    border-width: 8px;
 }

@@ -86,10 +86,64 @@
 
     </div><br>
 
+    <div>
+        <div class="interactive-demo">
+            <div class="thing0">
+                <h2>Interactive Demonstrations: CSS Animations & Transitions</h2>
+                <p>Hover over the box below to see smooth transitions and transformations:</p>
+            </div>
+
+            <div class="demo-box">
+            </div>
+
+        </div><br>
+
+        <div class="visibility-demo">
+            <div class="thing0">
+                <h2>Visibility Property Demo</h2>
+                <p>Click the button to toggle element visibility (notice it still takes up space):</p>
+            </div>
+
+            <div class="center">
+                <button class="show-button" onclick="toggleVisibility()">Toggle Visibility</button>
+                <div class="hidden-element" id="hiddenElement" style="visibility: hidden; opacity: 0;">
+                    This element demonstrates the visibility property!<br>
+                    When hidden, it still occupies space in the layout.
+                </div>
+            </div>
+        </div>
+
+        <div class="box-model-demo">
+            <div class="thing0">
+                <h2>Box Model Demonstration</h2>
+                <p>Hover to see padding, margin, and border changes:</p>
+            </div>
+                
+                <div class="box-example">
+                    Box Model Demo<br>
+                    <small>Margin: 20px | Border: 5px | Padding: 20px</small>
+                </div>
+            </div>
+
+    </div><br>
+
     <div id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.3920655060456!2d-74.9925193238356!3d44.73201747107142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc5d49b5e03a9f%3A0x34ed4ffecd8d6afb!2sBOCES%20Seaway%20Tech%20Campus!5e0!3m2!1sen!2sus!4v1749054745674!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
+<script>
+    // JavaScript for interactive elements
+    function toggleVisibility() {
+        const element = document.getElementById('hiddenElement');
+        if (element.style.visibility === 'hidden' || element.style.visibility === '') {
+            element.style.visibility = 'visible';
+            element.style.opacity = '1';
+        } else {
+            element.style.visibility = 'hidden';
+            element.style.opacity = '0';
+        }
+    }
+</script>
+
 </body>
-<script src="script.js"></script>
 </html>
