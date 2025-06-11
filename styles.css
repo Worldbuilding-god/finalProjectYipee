@@ -1,14 +1,22 @@
 /*
 color: #00568c; dark cyan
-color: #008e66; green
-color: #ffffff; ŵħïťè
-color: #000000; black
-color: #3d3d3d; grey
+color: #008e66; green1
+color: #ffffff; ŵħïťè1
+color: #000000; black1
+color: #3d3d3d; grey1
 */
+
+:root {
+  --darkcyan: #00568c;
+  --green1: #008e66;
+  --white1: #ffffff;
+  --black1: #000000;
+  --grey1: #3d3d3d;
+}
 
 nav{
     padding: 0% 0% 0% 5%;
-    background-image: linear-gradient(to right,#00568c, #008e66, #008e66);
+    background-image: linear-gradient(to right, var(--darkcyan), var(--green1), var(--green1));
     /* position: sticky;
     top: 0;
     overflow: hidden; */
@@ -35,13 +43,13 @@ nav{
 
     a{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white1);
     transition: background-color 0.3s ease 0.01s;
     transition: border 0.3s ease 0.001s;
     }
 
     a:hover{
-    color: #00568c;
+    color: var(--darkcyan);
     background-color: #ffffff7a;
     border: #ffffff7a solid 1px;
     border-radius: 10px;
@@ -50,11 +58,11 @@ nav{
 
 a{
     text-decoration: none;
-    color: #008e66;
+    color: var(--green1);
 }
 
 a:hover{
-    color: #00568c;
+    color: var(--darkcyan);
 }
 
 #logo1{
@@ -63,10 +71,10 @@ a:hover{
 }
 
 #head{
-    background-image: linear-gradient(to right,#00568c, #008e66, #008e66);
+    background-image: linear-gradient(to right, var(--darkcyan), var(--green1), var(--green1));
     text-align: center;
     padding: 10% 0% 10% 0%;
-    color: #ffffff;
+    color: var(--white1);
     width: 100%;
     height: 10%;
 
@@ -100,20 +108,27 @@ iframe:hover{
 }
 
 #services{
-    color: #00568c;
+    color: var(--darkcyan);
 }
 
 .thing0{
     text-align: center;
-    color: #00568c;
+    color: var(--darkcyan);
+}
+
+.greybox{
+    background: #e3e3e3;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
 }
 
 .thing1{
     text-align: center;
-    border: #00568c solid 1px;
+    border: var(--darkcyan) solid 1px;
     border-radius: 5px;
     margin: 4px;
-    background-color: #ffffff;
+    background-color: var(--white1);
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.337));
     transition: filter 0.3s ease 0.1s;
 }
@@ -129,7 +144,7 @@ iframe:hover{
 }
 
 #about{
-    color: #00568c;
+    color: var(--darkcyan);
 }
 
 .tech-grid{
@@ -141,8 +156,8 @@ iframe:hover{
 }
 
 .tech-item{
-    background: linear-gradient(135deg, #00568c, #008e66, #008e66);
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--darkcyan), var(--green1), var(--green1));
+    color: var(--white1);
     padding: 1rem;
     text-align: center;
     border-radius: 8px;
@@ -165,7 +180,7 @@ iframe:hover{
 .demo-box{
     width: 100px;
     height: 100px;
-    background: #00568c;
+    background: var(--darkcyan);
     margin: 1rem auto;
     border-radius: 10px;
     transition: all 0.5s ease;
@@ -181,14 +196,14 @@ iframe:hover{
     top: 120%;
     left: 50%;
     transform: translateX(-50%);
-    color: #3d3d3d;
+    color: var(--grey1);
     font-size: 0.9rem;
     opacity: 0;
     transition: opacity 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .demo-box:hover{
-    background: #008e66;
+    background: var(--green1);
     transform: rotate(45deg) scale(1.2);
     border-radius: 50%;
 }
@@ -204,8 +219,8 @@ iframe:hover{
 }
 
 .show-button {
-    background: #00568c;
-    color: #ffffff;
+    background: var(--darkcyan);
+    color: var(--white1);
     border: none;
     padding: 1rem 2rem;
     border-radius: 5px;
@@ -216,13 +231,13 @@ iframe:hover{
 }
 
 .show-button:hover {
-    background: #006eb3;
+    background: var(--darkcyan);
     transform: translateY(-2px);
 }
 
 .hidden-element {
-    background: #008e66;
-    color: #ffffff;
+    background: var(--green1);
+    color: var(--white1);
     padding: 1rem;
     border-radius: 5px;
     margin: 1rem;
@@ -239,11 +254,11 @@ iframe:hover{
 }
 
 .box-example {
-    background: #00568c;
-    color: #ffffff;
+    background: var(--darkcyan);
+    color: var(--white1);
     padding: 20px;
     margin: 20px;
-    border: 5px solid #008e66;
+    border: 5px solid var(--green1);
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -252,4 +267,17 @@ iframe:hover{
     padding: 30px;
     margin: 30px;
     border-width: 8px;
+}
+
+#portfolio{
+    h1{
+        text-align: center;
+        color: var(--darkcyan);
+    }
+}
+
+footer{
+    background-color: var(--grey1);
+    color: var(--white1);
+    text-align: center;
 }
